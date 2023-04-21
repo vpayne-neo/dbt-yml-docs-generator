@@ -12,11 +12,11 @@ def main():
     
     version = ymlData["version"]
     
-    directoryToJoin = ""
+    directoryToJoin = "" 
 
     for i in ymlData["models"]:
         with open(os.path.join(directoryToJoin, i["name"] + '.yml'), 'w') as ymlFile:
-                yaml.dump({"version": version, "models": i }, stream=ymlFile, sort_keys=False)
+                yaml.dump({"version": version, "models": i }, stream=ymlFile, sort_keys=False, width=79)
 
 if __name__ == "__main__":
     main()
