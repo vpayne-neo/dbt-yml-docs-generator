@@ -1,0 +1,29 @@
+version: 2
+models:
+  name: core_counter_parties
+  description: 'Table containing all Neo product counter parties.
+
+    The raw data is owned by squad-accounts, squad-payments, and squad-core
+
+    '
+  meta:
+    contains_pii: true
+  tags:
+  - core
+  columns:
+  - name: counterPartyId
+    description: This is the primary key for the table. It is a unique ID for the
+      counter party
+  - name: counterPartyName
+  - name: counterPartyInstitutionId
+    description: the counter party institution number
+  - name: counterPartyCreatedAt
+    description: the earliest createdAt date from any source for a specific counterPartId
+  - name: counterPartyUpdatedAt
+    description: the most recent updatedAt date from any source for a specific counterPartId
+  - name: counterPartyPhone
+  - name: counterPartyIsEFT
+    description: boolean value is true if counter party is used for EFT
+  - name: counterPartyAccountNumber
+    description: hashed value of the account number
+  - name: counterPartyTransitNumber
