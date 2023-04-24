@@ -12,7 +12,7 @@ def main():
     
     version = ymlData["version"]
     
-    directoryToJoin = "/Users/vincepayne/neo-analytics/packages/dbt/models/core/" 
+    directoryToJoin = "" 
 
     for i in ymlData["models"]:
         with open(os.path.join(directoryToJoin, i["name"] + '.yml'), 'w') as ymlFile:
